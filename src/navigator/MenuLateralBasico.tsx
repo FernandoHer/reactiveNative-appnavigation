@@ -9,13 +9,13 @@ import { useWindowDimensions } from 'react-native';
 const Drawer = createDrawerNavigator();
 
 export const MenuLateralBasico = () => {
-  const {width} = useWindowDimensions();
+  const {width, height} = useWindowDimensions();
   return (
     <Drawer.Navigator
       screenOptions={{
-        drawerType:  width >= 768 ? 'permanent' : 'front',
+        drawerType: (width > height) ? 'permanent' : 'front',
+        headerShown: false,
       }}
-      
     >
       <Drawer.Screen name="StackNavigator" options={{title: 'home'}} component={StackNavigator} />
       <Drawer.Screen name="SettingsScreen" options={{title: 'Settings'}} component={SettingsScreen} />

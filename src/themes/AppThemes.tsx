@@ -9,6 +9,11 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     marginBottom: 10,
   },
+  argumentos:{
+    marginVertical: 20,
+    fontSize:20,
+    marginLeft:5,
+  },
   botonGrande: {
     width: 80,
     height: 80,
@@ -21,5 +26,25 @@ export const styles = StyleSheet.create({
   botonText:{
     fontSize: 18,
     color: 'white',
-  }
+  },
+  avatarContent:{
+    alignItems:'center',
+    marginTop: 8,
+  },
+  avatar:{
+    width:150,
+    height:150,
+    borderRadius:100,
+  },
+  menuContainer:{
+    marginHorizontal: 10,
+    marginVertical: 10,
+  },
+  menuBoton:{
+    alignItems: 'center',
+    marginVertical: 10,
+  },
+  menuTexto:{
+    fontSize: 25,
+  },
 });

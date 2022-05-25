@@ -1,6 +1,6 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import { DrawerScreenProps } from '@react-navigation/drawer';
-import { StackScreenProps } from '@react-navigation/stack';
 import React, { useEffect } from 'react';
 import {Button, Text, View, TouchableOpacity} from 'react-native';
 import { styles } from '../themes/AppThemes';
@@ -32,7 +32,7 @@ export const Page1Screen = ({ navigation }:Props) => {
           onPress={ () => navigation.navigate('Page2Screen') }
         />
 
-        <Text>Navegación con Argumentos</Text>
+        <Text style={styles.argumentos}>Navegación con Argumentos</Text>
         <View style={{
           flexDirection: 'row',
         }}>
@@ -59,7 +59,6 @@ export const Page1Screen = ({ navigation }:Props) => {
             <Text style={styles.botonText}>Mariela</Text>
           </TouchableOpacity>
         </View>
-        
 
     </View>
     );
