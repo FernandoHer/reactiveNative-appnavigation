@@ -1,15 +1,13 @@
-import {NavigationContainer} from '@react-navigation/native';
+/* eslint-disable prettier/prettier */
+import 'react-native-gesture-handler';
 import React from 'react';
-
-// import {NavigationContainer} from '@react-navigation/native';
-import {Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import { MenuLateralBasico } from './src/navigator/MenuLateralBasico';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <View>
-        <Text> App Screen</Text>
-      </View>
+      <MenuLateralBasico/>
     </NavigationContainer>
   );
 };
