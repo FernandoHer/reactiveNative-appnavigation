@@ -19,10 +19,8 @@ export const Page1Screen = ({ navigation }:Props) => {
         onPress={ () => navigation.toggleDrawer()}/>
       ),
     });
+  }, []);
 
-
-  }, [])
-  
 
   return (
     <View style= {styles.globalMargin}>
