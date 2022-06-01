@@ -1,8 +1,11 @@
-/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-native/no-inline-styles */
+
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import React, { useEffect } from 'react';
 import {Button, Text, View, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { styles } from '../themes/AppThemes';
 
 
@@ -43,6 +46,9 @@ export const Page1Screen = ({ navigation }:Props) => {
                   name: 'Fernando',
                 })}
           >
+            <Text>
+              <Icon name="man-outline" size={25} color="white" />
+            </Text>
             <Text style={styles.botonText}>Fernando</Text>
           </TouchableOpacity>
           <TouchableOpacity 
@@ -54,6 +60,9 @@ export const Page1Screen = ({ navigation }:Props) => {
                   name: 'Mariela',
                 })}
           >
+            <Text>
+              <Icon name="woman-outline" size={25} color="white" />
+            </Text>
             <Text style={styles.botonText}>Mariela</Text>
           </TouchableOpacity>
         </View>

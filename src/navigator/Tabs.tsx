@@ -7,9 +7,10 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 
 import { StackNavigator } from './StackNavigator';
 import { colores } from '../themes/AppThemes';
-import { Platform, Text } from 'react-native';
+import { Platform } from 'react-native';
 import { TopTabNavigator } from './TopTabNavigator';
 import { Tab1Screen } from '../screens/Tab1Screen';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export const Tabs = () => {
   return Platform.OS === 'ios'
@@ -30,19 +31,18 @@ const TabAndroid = () => {
           let iconName: string = '';
           switch (route.name) {
             case 'Tab1Screen':
-                iconName = 'T1';
+                iconName = 'airplane-sharp';
               break;
             case 'TopTabNavigator':
-              iconName = 'T2';
+              iconName = 'basketball-outline';
             break;
             case 'StackNavigator':
-              iconName = 'SN';
+              iconName = 'bookmarks-outline';
             break;
           }
-          return <Text style={{color}}> {iconName} </Text>;
+          return  <Icon name={iconName} size={20} color={color} />
         }})
       }
-     
     >
       <BottomTabAndroid.Screen name="Tab1Screen" options={{title: 'Tab1'}} component={Tab1Screen} />
       <BottomTabAndroid.Screen name="TopTabNavigator" options={{title: 'TopTab'}} component={TopTabNavigator} />
@@ -69,23 +69,21 @@ const TabIOS = () => {
         tabBarLabelStyle: {
             fontSize: 15,
         },
-        tabBarIcon: (props) => {
+        tabBarIcon: ({color}) => {
  
           let iconName: string = '';
           switch (route.name) {
-              case 'Tab1Screen' :
-                  iconName = 'T1';
-              break;
-
-              case 'TopTabNavigator' :
-                  iconName = 'T2';
-              break;
-
-              case 'StackNavigator' :
-                  iconName = 'ST';
-              break;
+            case 'Tab1Screen':
+              iconName = 'airplane-sharp';
+            break;
+          case 'TopTabNavigator':
+            iconName = 'airplane-outline';
+          break;
+          case 'StackNavigator':
+            iconName = 'arrow-redo';
+          break;
           }
-          return <Text style={{color: props.color}}>{ iconName }</Text>;
+          return <Icon name={iconName} size={20} color={color} />;
       },
     })}
     >

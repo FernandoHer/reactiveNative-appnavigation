@@ -19,6 +19,7 @@ target 'navegacionApp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+
   target 'navegacionAppTests' do
     inherit! :complete
     # Pods for testing

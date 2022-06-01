@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { useEffect } from 'react';
 import { Text, View } from 'react-native';
@@ -18,7 +20,7 @@ export const PersonScreen = ({route, navigation}:Props) => {
     useEffect( () =>{
         navigation.setOptions({
             title: params.name,
-        })
+        });
     },[]);
 
   return (
