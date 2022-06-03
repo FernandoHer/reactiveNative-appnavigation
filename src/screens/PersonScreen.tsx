@@ -2,8 +2,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import { StackScreenProps } from '@react-navigation/stack';
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Text, View } from 'react-native';
+import { AuthContext } from '../context/AuthContext';
 import { RootStackParams } from '../navigator/StackNavigator';
 import { styles } from '../themes/AppThemes';
 
@@ -15,6 +16,8 @@ import { styles } from '../themes/AppThemes';
 interface Props extends StackScreenProps<RootStackParams, 'PersonScreen'>{}
 
 export const PersonScreen = ({route, navigation}:Props) => {
+    const {changeUsername} = useContext(AuthContext);
+
     // const params = route.params as RouterParams;
     const params = route.params;
     useEffect( () =>{
@@ -22,6 +25,11 @@ export const PersonScreen = ({route, navigation}:Props) => {
             title: params.name,
         });
     },[]);
+
+    useEffect(() => {
+        changeUsername(params.name);
+    }, []);
+
 
   return (
     <View style={styles.globalMargin}>
